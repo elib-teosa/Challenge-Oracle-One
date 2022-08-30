@@ -1,0 +1,33 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 2. REPITA ACTIVIDADES
+12. Simulando una pantalla de inicio de seión -->
+
+<meta charset="UTF-8">
+<script>
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    let intentos = 3;
+    let contador = 1;
+
+    while(contador <= intentos){
+    	var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    	var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    	if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+	        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+	        break;
+	    } else {
+	        if (contador == 3) {
+                alert("Agotaste el número permitido de intentos!");
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+            }
+	    }
+
+	    contador++;
+    }
+
+    
+</script>

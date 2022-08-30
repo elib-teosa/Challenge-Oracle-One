@@ -1,0 +1,59 @@
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA</h1>
+ 
+<!-- Definición del apartado que contine el código con JS, este código es dinamico puedo hacer uso de variables y cambiar sus valores así como definir funciones-->
+<script type="text/javascript">
+	// Las variables no se definen con comillas 
+	// las variables son sensibles a minusculas y mayusculas, es decir, una variable no es la misma si esta escrita en mayusculas que si esta escrita en minusculas
+	let anio = 2025;
+
+	document.write("Juan tiene: " + (anio-2000) + " años");
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("Pedro tiene: " + (anio-1995) + " años");
+
+	// El valor de la variable cambia y por lo tanto, al ser un código secuancial, Juan y Pedro tomaran el año de la primera definición de la variable y Carlos tomará la segunda definición 
+	anio =2030;
+
+	document.write("<br>");
+	document.write("<br>");
+	
+	document.write("Carlos tiene: " + (anio-2005) + " años");
+
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+
+	/* 04 Variables*/
+
+	anio = 2020;
+
+	document.write("Jimena tiene: " + (anio-2010) + " años");
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("Paola tiene: " + (anio-1995) + " años");
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("Laura tiene: " + (anio-2005) + " años");
+
+	document.write("<br>");
+	document.write("<br>");
+
+	let edadJimena = 10, edadPaola = 25, edadLaura = 15;
+
+	let nombre1= "Jimena", nombre2 = "Paola", nombre3 = "Laura";
+
+	// Se define una variable que contiene la operación para obtener el promedio de las edades de los tres usuarios anteriores
+	let promedio = (edadJimena+edadPaola+edadLaura)/3;
+
+	// La funcion Math.round() permite redondear un valor que contiene decimales
+	document.write("El promedio de las edades de " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+</script>

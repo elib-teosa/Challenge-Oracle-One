@@ -1,0 +1,79 @@
+<!-- Aula 5. Practique resolviendo problemas del día a día
+04. Explorando a fondo el retorno de funciones
+NOTA: Calcula el valor del IMC de dos personas y saca el promedio de ambos valores
+NOTA: Es mucho mejor crear funciones objetivas que realicen máximo una función y que  retornen un valor para poder reutilizarlas de mejor manera y como más sea conveniente, si realizamos una función que tenga muchas operaciones o acciones puede que no sea lo estrictamente general para reutilizarla en otros problemas o situaciones
+-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+ 
+<!-- Definición del apartado que contine el código con JS, este código es dinamico puedo hacer uso de variables y cambiar sus valores así como definir funciones-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	/*
+	PRIMERA OPCIÓN
+	Función que calcula el valor del IMC, tomando como parametros de entrada los parametros de entrada
+	* peso
+	* altura
+	e imprime un mensaje con el valor del IMC calculado con la ayuda  de la función "imprimir" previamente declarada
+	
+	function calcularImc(peso1, altura1, nombre1, peso2, altura2, nombre2){
+		let imc1= peso1/(altura1*altura1);
+		let imc2= peso2/(altura2*altura2);
+		imprimir("El promedio del IMC calculado de " + nombre1 + " y " + nombre2 + " es: " + (imc1 + imc2)/2);
+	}
+
+	// Calulo del IMC de Christian y Felipe
+	calcularImc(71, 1.72, "Christian", 75, 1.73, "Felipe");
+
+	// Calculo del IMC de Gabriela y Luisa
+	calcularImc(60, 1.70, "Gabriela", 55, 1.60, "Luisa");
+	*/
+
+	/* ---------------------------------------*/
+
+	/*
+	SEGUNDA OPCIÓN, MUCHO MAS FÁCIL DE MANEJAR Y MÁS FACIL DE DAR MANTENIMIENTO
+	Función que calcula el valor del IMC, tomando como parametros de entrada los parametros de entrada
+	* peso
+	* altura
+	retorna el valor del IMC calculado y almacenado en la variable "imc"
+	*/
+	function calcularImc(peso, altura){
+		/*let imc= peso/(altura*altura);
+		return imc;*/
+
+		// Otra opción para hacer el calculo del imc directamente desde el return
+		return (peso/(altura*altura));
+	}
+
+	// Calculo del IMC de Christian y Felipe, llamando a la función "calcularIMC"
+	/*let imcChristian = calcularImc(71, 1.72);
+	let imcFelipe = calcularImc(75, 1.73);
+
+	imprimir("El promedio del IMC calculado de Christian y Felipe es: " + (imcChristian + imcFelipe)/2);*/
+
+	// Otra opción para hacer el calculo del IMC directamente sin almacenar los resultados en una variable previamente declarada, esta opción será viable si es más conveniente para el funcionaiento del programa objetivo 
+	imprimir("El promedio del IMC calculado de Christian y Felipe es: " + (calcularImc(71, 1.72) + calcularImc(75, 1.73))/2);
+
+	imprimir("El promedio del IMC calculado de Gabriela y Luisa es: " + (calcularImc(65, 1.68) + calcularImc(55, 1.60))/2);
+
+
+</script>

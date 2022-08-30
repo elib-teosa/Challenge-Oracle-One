@@ -1,0 +1,37 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 1. EJECUTE CÓDIGOS DIFERENTES DEPENDIENDO DE LA CONDICIÓN
+03. Convirtiendo texto en número-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA - CALCULAR LOS PUNTOS D EUN EQUIPO DE FÚTBOL</h1>
+ 
+<!-- Definición del apartado que contine el código con JS-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	// los datos solicitados por prompt son devueltos como un tipo de dato de cadena de caracteres, para manejarlos como número es necesario convertir el número en cadena a un valor númerico
+	// para transformar la variable dada como cadena a un número podemos usar la función parseInt(), si intentamos transformar un valor que no es un número el parseInt regresara NaN
+	let victorias = parseInt(prompt("Informe la cantidad de victorias"));
+	let empates = parseInt(prompt("Informe la cantidad de empates"));
+
+	// Calculo de los puntos totales del equipo 
+	let puntosTotal = victorias * 3 + empates;
+	imprimir("El total de puntos del equipo es: " + puntosTotal);
+
+</script>

@@ -1,0 +1,41 @@
+<!-- 
+HTML tiene una etiqueta definida como <canvas></canvas> que indica un espacio de edición gráfica
+-->
+
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	let pantalla = document.querySelector("canvas");
+	// Variable pincel, encargado de graficar/pintar la pantalla
+	let pincel = pantalla.getContext("2d");
+
+	// fillStyle es una propiedad que sirve para cambiar el estilo como el color
+	pincel.fillStyle = "lightgrey"
+	// Función Fill = rellenar, las indicaciones se dan por medio de coordenadas (xInicio, yInicio, xFinal, yFinal)
+	pincel.fillRect(0,0, 600, 400);
+
+	pincel.fillStyle = "green";
+	pincel.fillRect(0,0, 200, 400);
+
+	pincel.fillStyle = "red";
+	pincel.fillRect(400,0, 200, 400);
+
+	/* Se grafica un traingulo amarillo*/
+	pincel.fillStyle = "yellow";
+	// Iniciamos un camino
+	pincel.beginPath();
+	pincel.moveTo(300, 200);
+	pincel.lineTo(200, 400);
+	pincel.lineTo(400, 400);
+	pincel.fill();
+
+	/* Se grafica un circulo azul*/
+	pincel.fillStyle = "blue";
+	// Iniciamos un camino
+	pincel.beginPath();
+	// arc se usa para graficar circunferencias (xCentro, yCentro, radio, anguloInicial, anguloFinal)
+	pincel.arc(300, 200, 50, 0, 2*3.14);
+	// Rellenar figura
+	pincel.fill();
+
+</script>

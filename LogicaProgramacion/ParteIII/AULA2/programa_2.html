@@ -1,0 +1,43 @@
+<!-- 
+HTML tiene una etiqueta definida como <canvas></canvas> que indica un espacio de edición gráfica
+-->
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+
+	/*
+	Función que dibuja un cuadrado, sus parametros de entrada son las posiciones iniciales de x y y en el canvas y el color con el que se desea rellenar 
+	*/
+	function dibujarCuadrado(x,y,color){
+		let pantalla = document.querySelector('canvas');
+		// Variable pincel, encargado de graficar/pintar la pantalla
+		let pincel = pantalla.getContext('2d');
+
+		// fillStyle es una propiedad que sirve para cambiar el estilo como el color
+		pincel.fillStyle = color;
+		// Función Fill = rellenar, las indicaciones se dan por medio de coordenadas (xInicio, yInicio, xFinal, yFinal)
+		pincel.fillRect(x,y, 50, 50);
+		// Trabajar con bordes
+		pincel.strokeStyle = 'black';
+		pincel.strokeRect(x,y, 50, 50);
+	}
+
+	/*
+	// OPCIÓN ciclo WHILE
+	let x = 0;
+	while(x < 600){
+		dibujarCuadrado(x,0, 'red');
+		dibujarCuadrado(x,50, 'yellow');
+		dibujarCuadrado(x,100, 'green');
+		x+=50;
+	}
+	*/
+
+	for (var x = 0; x < 600; x+=50) {
+		dibujarCuadrado(x,0, 'red');
+		dibujarCuadrado(x,50, 'yellow');
+		dibujarCuadrado(x,100, 'green');
+	}
+	
+
+</script>

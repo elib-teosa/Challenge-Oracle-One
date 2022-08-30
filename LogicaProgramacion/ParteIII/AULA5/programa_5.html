@@ -1,0 +1,66 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	let pantalla = document.querySelector("canvas");
+	// Variable pincel, encargado de graficar/pintar la pantalla
+	let pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey"
+	pincel.fillRect(0,0, 600, 400);
+
+	let radio = 10;
+	let xAleatorio, yAleatorio;
+
+	// Crea un circulo en x, y coordenadas y tamaño de radio "radio"
+	function diseniarCircunferencia(x, y, radio, color){
+		pincel.fillStyle = color;
+		pincel.beginPath();
+		pincel.arc(x, y, radio, 0, 2*Math.PI);
+		pincel.fill();
+	}
+
+	function limpiarPantalla(){
+		// Instrccion para limpar pantalla
+		pincel.clearRect(0,0,600,400);
+	}
+
+	// Dibuja en el canvas un objetivo
+	function diseniarObjetivo(x, y){
+		diseniarCircunferencia(x, y, radio + 20, "red");
+		diseniarCircunferencia(x, y, radio + 10, "white");
+		diseniarCircunferencia(x, y, radio, "red");
+	}
+
+	function sortearPosicion(maximo){
+		// Math.floor redondea hacia abajo
+		return Math.floor(Math.random()*maximo);
+	}
+
+	// Dibuja el objetivo en una posición aleatoria
+	function actualizarPantalla(){
+		limpiarPantalla();
+		xAleatorio = sortearPosicion(600);
+		yAleatorio = sortearPosicion(400);
+		diseniarObjetivo(xAleatorio, yAleatorio);
+	}
+
+	function disparar(evento){
+		var x = evento.pageX - pantalla.offsetLeft;
+		var y = evento.pageY - pantalla.offsetTop;
+		if ((x < xAleatorio + radio) 
+			&& (x < xAleatorio - radio)
+			&& (y < yAleatorio + radio)
+			&& (y < yAleatorio - radio)) {
+			alert("Tiro certero");
+		}
+		
+	}
+
+	// Ejecuta cierta accion en determinados milisegundos que sean especificados
+	setInterval(actualizarPantalla, 1000);
+
+	pantalla.onclick = disparar;
+
+	
+
+</script>

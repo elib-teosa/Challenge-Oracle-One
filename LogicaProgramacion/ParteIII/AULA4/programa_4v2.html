@@ -1,0 +1,66 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	let pantalla = document.querySelector("canvas");
+	// Variable pincel, encargado de graficar/pintar la pantalla
+	let pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey"
+	pincel.fillRect(0,0, 600, 400);
+
+	// Crea un circulo en x, y coordenadas y tamaño de radio "radio"
+	function diseniarCircunferencia(x, y, radio){
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x, y, radio, 0, 2*Math.PI);
+		pincel.fill();
+	}
+
+	function limpiarPantalla(){
+		// Instrccion para limpar pantalla
+		pincel.clearRect(0,0,600,400);
+		pincel.fillStyle = "lightgrey"
+		pincel.fillRect(0,0, 600, 400);
+	}
+
+	/*let x = 10, bandera = true;
+	function actualizarPantalla(){
+		limpiarPantalla();
+		diseniarCircunferencia(x, 20, 10);
+		if (bandera) {
+			x++;
+			if (x==590) {
+				bandera = !bandera
+			}
+		}else{
+			x--;
+			if (x==10) {
+				bandera=!bandera;
+			}
+		}		
+	}*/
+
+	// OTRA OPCION
+	var x = 10
+    var sentido = 1;
+
+    function actualizarPantalla(){
+
+        limpiarPantalla();
+        if(x > 590){
+            sentido = -1;
+        }else if(x < 10){
+            sentido = 1;
+        }
+
+        diseniarCircunferencia(x,20,10);
+        x = x + sentido;
+    }
+
+	// Ejecuta cierta accion en determinados milisegundos que sean especificados
+	setInterval(actualizarPantalla, 9);
+
+
+	
+
+</script>

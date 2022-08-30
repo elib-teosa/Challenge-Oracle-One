@@ -1,0 +1,69 @@
+<!-- Aula 4. Cree sus propias funcionalidades
+02. Mejorando el mantenimiento de código
+Nota: Este código hace usode funciones en JS y se realiza el calculo de la edad de Juan, Pedro y Carlos-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA</h1>
+ 
+<!-- Definición del apartado que contine el código con JS, este código es dinamico puedo hacer uso de variables y cambiar sus valores así como definir funciones-->
+<script type="text/javascript">
+	/*
+	- Las funciones deben ser definidas usando la palabra especial "function" 
+	- El uso de parentesis es obligatorio, no opcional, sin importar si esta contiene parametros o no.
+	- Las funciones por convención suelen definirse al inicio del código
+	- Una buena práctica de programación es usar la identación entre líneas de código
+	- Todo lo que se encuentra dentor de las llaves definen el inicio y fin de la función
+	- Las funciones usualmente son definidas con un nombre que haga uso de algun verbo que represente la acción que realiza la función, además, de que facilite su comprensión
+	- Esta función en concreto no espera parámetros de entrada
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*05. Funciones con parámetros
+	- Definimos el parametro de entrada de la función entre los parentesis, lo que indica que la función estara esperando una entrada con la que podra trabajar dentro del bloque de código como mejor convenga para el correcto funcionamiento del programa, es decir, que cumpla con el objetivo en mentes
+	*/
+	function imprimir(mensaje){
+		document.write(mensaje);
+	}
+
+	// Las variables no se definen con comillas 
+	// las variables son sensibles a minusculas y mayusculas, es decir, una variable no es la misma si esta escrita en mayusculas que si esta escrita en minusculas
+	let anio = 2025;
+
+	// Llamamos a la función imprimir y le pasamos el parametro o mensaje, en este caso, que se va a imprimir en pantalla siguiendo las intrucciones de la definición de la función
+	imprimir("Hola, Amigos!");
+
+	saltarLinea();
+
+	// El nombre de las variables deben ser explicitos respecto a su referancia para evitar confusión a la hora de su manejo
+	// let saltoLinea = "<br><br><br>"
+
+	// document.write("Juan tiene: " + (anio-2000) + " años");
+
+	imprimir("Juan tiene: " + (anio-2000) + " años");
+
+	// Aquí mandamos a llamar a la función, es importante la definición de los parentesis ya que sin estos no es posible llmara a la función
+	saltarLinea();
+	// document.write(saltoLinea)
+
+	// document.write("Pedro tiene: " + (anio-1995) + " años");
+
+	imprimir("Pedro tiene: " + (anio-1995) + " años");
+
+	// El valor de la variable cambia y por lo tanto, al ser un código secuancial, Juan y Pedro tomaran el año de la primera definición de la variable y Carlos tomará la segunda definición 
+	anio =2030;
+
+	saltarLinea();
+	// document.write(saltoLinea);
+	
+	//document.write("Carlos tiene: " + (anio-2005) + " años");
+
+	imprimir("Carlos tiene: " + (anio-2005) + " años");
+
+	document.write("<br>");
+	
+</script>

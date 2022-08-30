@@ -1,0 +1,72 @@
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+
+HTML
+<br>
+La edad de Christian es...
+<br>
+?
+<br><br>
+JavaScript
+<br>
+
+<!-- Definición del apartado que contine el código con JS, este código es dinamico puedo hacer uso de variables y cambiar sus valores así como definir funciones-->
+<script type="text/javascript">
+	/*alert("La edad de Christian es...");
+	alert("?");*/
+
+	document.write("La edad de Christian es... <br>");
+	// document.write("<br>");
+	document.write("25"); // Si no agregamos comillas al número JavaScript lo define como un valor númerico y no como una cadena de texto
+	document.write("<br>");
+	document.write(100/4 );
+	document.write("<br>");
+	// Cuando dos cadenas "se suman (+)" estas se concatenan, si fuese "25" + 15, de la misma forma JS concatena ambos como una cadena 
+	document.write("25" +"15")
+	document.write("<br>");	
+
+	/* 06 Operaciones con textos y números*/
+	document.write("El año de nacimiento de Christian es...");
+	document.write("<br>");
+	document.write(2020-29);
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("El promedio de Juan, Pedro y Carlos es...");
+	document.write("<br>");
+	// Considerar las reglas de prioridad de operadores para la realización cuentas matematicas
+	document.write((20+25+15)/3);
+	document.write("<br>");
+	document.write("<br>");
+	// Sin los parentesis que engloben a los números estos simplemente se concatenan con la cadena, en cambio si se ponen entre parentesis el compilador primero realizará las operaciones y posteriormente lo concatenara con la cadena
+	document.write("El suma de las edades de Juan, Pedro y Carlos es... <br>" +(20+25+15));
+	document.write("<br>");
+	document.write("<br>");
+
+	// También puedeescribirse de la siguiente forma
+	document.write("El suma de las edades de Juan, Pedro y Carlos es..." );
+	document.write("<br>");
+	document.write((20+25+15));
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("Juan nació en el año..." );
+	document.write("<br>");
+	document.write(2020-20);
+
+	document.write("<br>");
+	document.write("<br>");
+
+	document.write("Pedro nació en el año..." );
+	document.write("<br>");
+	document.write(2020-25);
+
+	document.write("<br>");
+	document.write("<br>");
+	
+	document.write("Carlos nació en el año..." );
+	document.write("<br>");
+	document.write(2020-15);
+</script>

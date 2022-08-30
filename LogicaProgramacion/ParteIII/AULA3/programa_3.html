@@ -1,0 +1,38 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	let pantalla = document.querySelector("canvas");
+	// Variable pincel, encargado de graficar/pintar la pantalla
+	let pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "grey"
+	pincel.fillRect(0,0, 600, 400);
+
+
+	// Función que muestra una alerta al dar click en el espacio de canvas
+	function exhibirAlerta(evento){
+		// evento.pageX muestra las coordenadas de la pantalla del navegador completa, no solo del canvas
+		// pantalla.offset**** permite quitar el resto
+		let x = evento.pageX - pantalla.offsetLeft;
+		let y = evento.pageY - pantalla.offsetTop;
+		console.log(evento);
+		alert(x + ", " + y);
+	}
+
+	// Función que dibuja un circulo en el canvas donde el usuario de click
+	function dibujarCirculo(evento){
+		let x = evento.pageX - pantalla.offsetLeft;
+		let y = evento.pageY - pantalla.offsetTop;
+
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x,y,10,0,2*3.14)
+		pincel.fill();
+
+		console.log(x + ", " + y);
+	}
+
+	//pantalla.onclick = exhibirAlerta;
+	pantalla.onclick = dibujarCirculo;
+
+</script>

@@ -1,0 +1,60 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 2. REPITA ACTIVIDADES
+08. Interrumpiendo una Repetición -->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA - Juego de Adivinación</h1>
+ 
+<!-- Definición del apartado que contine el código con JS-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	// Para hacer que un número sea aleatorio se hace el uso de la función random que pertenece al modulo de Math, este devuelve un valor aleatorio entre 0 y 1
+	let numeroPensado = Math.round(Math.random()*10);
+	// Definimos un número de intentos que tiene el usuario para adivinar el número pensado
+	let intentos = 3;
+	let contador = 1;
+	let numeroLanzado;
+
+	while(contador <= intentos){
+		numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+		if (numeroLanzado == numeroPensado) {
+			alert("Usted acertó en el intento " + contador + ", el número pensado era: " + numeroPensado);
+
+			// El comando break permite la interrupción de un ciclo, lo va a parar y continuará el flujo del programa después del ciclo
+			break;
+		} else {
+			alert("Usted erró " );
+		}
+
+		contador++;
+
+	}
+
+	if (numeroLanzado == numeroPensado) {
+		imprimir("Usted acertó en el intento " + contador + ", el número pensado era: " + numeroPensado);
+	} else {
+		imprimir("Usted erró, el número pensado era: " +numeroPensado);
+	}
+
+	imprimir("FIN");
+	
+
+</script>

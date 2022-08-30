@@ -1,0 +1,46 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 2. REPITA ACTIVIDADES
+04. Otra forma de Repetir-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA - CALCULAR LA TABLA DE MULTIPLICAR</h1>
+ 
+<!-- Definición del apartado que contine el código con JS-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+
+	imprimir("Ciclo WHILE");
+	let multiplicador = 1;
+	while(multiplicador <=10){
+		imprimir(5*multiplicador);
+		multiplicador += 1; // es igual a poner multiplicador = multiplicador +1; también se puede usar multiplicador ++; este último siempre y cuando el incremento sea de 1
+	}
+	
+	/*
+	La declaración for se divide en tres partes que están separadas por un punto y coma. La primera se usa para declarar la variable que usaremos como contador, la segunda para la condición de repetición y la última para el incremento de la variable contador.
+	*/
+	imprimir("Ciclo FOR")
+	for(multiplicador = 1;  multiplicador <=10; multiplicador++){
+		imprimir(5*multiplicador);
+	}
+
+
+
+</script>

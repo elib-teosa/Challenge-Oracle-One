@@ -1,0 +1,59 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 2. REPITA ACTIVIDADES
+06. Acumulando variables -->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA - CALCULAR LA MEDIA(PROMEDIO) DE LAS EDADES DE UNA FAMILIA</h1>
+ 
+<!-- Definición del apartado que contine el código con JS-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	/* PRIMERA OPCIÓN, el conflicto que ocurre aqui es que no es lo suficientemente generico para que funcione para diversos tipos de familias en caso de que más de un usuario lo utilice y no tenga la misma organización familiar
+	let edadPadre = 42;
+	let edadMadre = 38;
+	let edadHijo = 15;
+	let edadHija = 12;
+
+	let totalEdad = edadPadre + edadMadre + edadHijo + edadHija;
+	let mediaEdad = totalEdad / 4;
+
+	imprimir("La media de las edades es: " + mediaEdad);
+	*/
+
+	/*------------------------------------*/
+
+	/*
+	 OPCIÓN 2, Usando el ciclo while 
+	 Este programa permite la interacción con el usuario, es más generico para cualquier tipo de familia con el numero de integrantes personalizado
+	*/
+	let numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+	let contador = 1, edadTotal = 0;
+
+	while(contador <= numeroMiembros){
+		let edad = parseInt(prompt("Ingrese la edad del familiar"));
+		edadTotal += edad;
+		contador++;
+	}
+
+	imprimir("Edad Total de la familia: " + edadTotal);
+	let mediaEdades = edadTotal / numeroMiembros;
+	imprimir("La media de las edades de la familia es: " + mediaEdades);
+
+</script>

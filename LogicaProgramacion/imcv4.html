@@ -1,0 +1,58 @@
+<!-- LÓGICA DE PROGRAMACIÓN 2
+AULA 1. EJECUTE CÓDIGOS DIFERENTES DEPENDIENDO DE LA CONDICIÓN
+05. Mejorando el programade IMC-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+ 
+<!-- Definición del apartado que contine el código con JS-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	/*
+	Función que calcula el valor del IMC, tomando como parametros de entrada los parametros de entrada
+	* peso
+	* altura
+	retorna el valor del IMC calculado y almacenado en la variable "imc"
+	*/
+	function calcularImc(peso, altura){
+		return (peso/(altura*altura));
+	}
+
+	// Le pedimos/solicitamos al usuario que ingrese su nombre, peso y altura por medio de "prompt
+	let nombre = prompt("Informe su nombre")
+	let pesoInformado = prompt(nombre + ", informe su peso");
+	let alturaInformada = prompt(nombre + ", informe su altura");
+
+	let imcCalculado = calcularImc(pesoInformado, alturaInformada);
+
+	imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+	// Condicionales que defininen el IMC en 4 categorías segun el peso y la altura del usuario
+	if (imcCalculado < 18.5) {
+		imprimir("IMC abajo de lo recomendado");
+	} else if (imcCalculado >= 18.5 && imcCalculado <= 24.9) {
+		imprimir("IMC está dentro del intervalo normal");
+	} else if (imcCalculado >= 25.0 && imcCalculado <= 29.9) {
+		imprimir("IMC considerado como sobrepeso");
+	} else {
+		imprimir("IMC considerado como obesidad");
+	}
+
+</script>

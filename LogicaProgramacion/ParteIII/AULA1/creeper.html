@@ -1,0 +1,24 @@
+<canvas width="350" height="300">
+	
+</canvas>
+
+<script type="text/javascript">
+	let pantalla = document.querySelector("canvas");
+	let pincel = pantalla.getContext("2d");
+
+	// Rectangulo 1
+	pincel.fillStyle = "darkgreen";
+	pincel.fillRect(0,0,350,300); // Cabeza
+
+	pincel.fillStyle = 'black';
+	// Rectangulo 2
+	pincel.fillRect(50,60,90, 90); //Ojo
+	// Rectangulo 3
+	pincel.fillRect(210,60,90, 90);//Ojo
+	// Rectangulo 4
+	pincel.fillRect(140,150,70, 100);//Nariz
+	// Rectangulo 5
+	pincel.fillRect(100,190,40, 110);//Boca
+	// Rectangulo 6
+	pincel.fillRect(210,190,40, 110);//Boca
+</script>

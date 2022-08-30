@@ -1,0 +1,96 @@
+<!-- Aula 5. Practique resolviendo problemas del día a día
+02. Calculando IMC-->
+
+<!-- Definición del conjunto de datos que estamos usando -->
+<meta charset="utf-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+ 
+<!-- Definición del apartado que contine el código con JS, este código es dinamico puedo hacer uso de variables y cambiar sus valores así como definir funciones-->
+<script type="text/javascript">
+	/*
+	Función que realiza determinados saltos de línea
+	*/
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	/*
+	Función que imprime un determinado mensaje en pantalla
+	*/
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+
+	/* 
+	PRIMERA OPCIÓN SIN EL USO DE UNA FUNCIÓN DE CALCULO DEL IMC
+	// Calulo del IMC de Christian
+	let pesoChristian = 71, alturaChristian = 1.72;
+	let imcChristian = pesoChristian/(alturaChristian*alturaChristian);
+	imprimir("El IMC de Christian es: " + imcChristian);
+
+	// Calculo del IMC de Felipe
+	let pesoFelipe = 75, alturaFelipe = 1.73;
+	let imcFelipe = pesoFelipe/(alturaFelipe*alturaFelipe);
+	imprimir("El IMC de Felipe es: " + imcFelipe);
+	*/
+
+	/* --------------------------------------------------- */
+
+	/*
+	ESTA FUNCIÓN ES USADA PARA LA OPCIÓN 2
+	Función que calcula el valor del IMC, tomando como parametros de entrada los parametros de entrada
+	* peso
+	* altura
+	y retorna el calculo (valor de la variable) con ayuda la palabra especial "return"
+
+	function calcularImc(peso, altura){
+		let imc= peso/(altura*altura);
+		return imc;
+	}
+
+	*/
+
+	/*
+	SEGUNDA OPCIÓN USANDO UNA FUNCIÓN QUE CALCULE EL VALOR DEL IMC
+	
+	// Calulo del IMC de Christian
+	let pesoChristian = 71, alturaChristian = 1.72;
+	let imcChristian = calcularImc(pesoChristian, alturaChristian);
+	imprimir("El IMC de Christian es: " + imcChristian);
+
+	// Calculo del IMC de Felipe
+	let pesoFelipe = 75, alturaFelipe = 1.73;
+	let imcFelipe = calcularImc(pesoFelipe, alturaFelipe);
+	imprimir("El IMC de Felipe es: " + imcFelipe);
+	*/
+
+	/*-------------------------------------------------*/
+
+	/*
+	ESTA FUNCIÓN ES USADA PARA LA OPCIÓN 3
+	Función que calcula el valor del IMC, tomando como parametros de entrada los parametros de entrada
+	* peso
+	* altura
+	e imprime un mensaje con el valor del IMC calculado con la ayuda  de la función "imprimir" previamente declarada
+	*/
+	function calcularImc(peso, altura, nombre){
+		let imc= peso/(altura*altura);
+		imprimir("El IMC calculado de " + nombre + " es: " + imc);
+	}
+
+
+	/*
+	TERCERA OPCIÓN PASANDO LOS VALORES NUMERICOS DE EL PESO Y LA ALTURA DIRECTAMENTE SIN EL USO DE VARIBLES DECLARADAS
+	*/
+
+	// Calulo del IMC de Christian
+	calcularImc(71, 1.72, "Christian");
+
+	// Calculo del IMC de Felipe
+	calcularImc(75, 1.73, "Felipe");
+
+</script>
