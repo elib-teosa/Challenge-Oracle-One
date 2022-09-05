@@ -1,0 +1,333 @@
+:root {
+	/*position: relative;*/
+	background-color: #F3F5FC;
+	--font-fam: 'Inter';
+	--font-s: normal;
+	--font-w: 400;
+	--font-sz: 19px;
+	--line-hght: 150%;
+}
+
+/* INICIO estilo del contenido */
+.div_contenido {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	margin: 10px;
+	padding: 5px;
+	width: max-content;
+}
+
+/* FIN estilo del contenido */
+
+/* INICIO LOGO */
+.img_logo{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 40px;
+
+	position: relative;
+	width: 120px;
+	height: 48px;
+	left: 0px;
+	top: 40px;
+}
+/* FIN LOGO */
+
+/* INICIO estilo de la entrada */
+.div_input{
+	position: relative;
+	width: auto;
+	height: max-content;
+	left: 20px;
+	top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.input_uno{
+	position: relative;
+	width: 577px;
+	height: 350px;
+	border:0;
+	background-color: #F3F5FC;
+	outline: none;
+
+	/* Configuración de fuente */
+	font-family: var(--font-fam);
+	font-style: var(--font-s);
+	font-weight: var(--font-w);
+	font-size: var(--font-sz);
+	line-height: var(--lin);
+
+
+	/* Dark blue/dark-blue-300 */
+	color: #0A3871;
+}
+
+.div_adv_input{
+	width: 100%;
+}
+
+.div_buttons_input{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: max-content;
+}
+
+.button_encriptar{
+	background: #0A3871;
+	color: #FFFFFF;
+}
+
+.button_desencriptar {
+	background: #D8DFE8;
+	/* Dark blue/dark-blue-300 */
+	color: #0A3871;
+}
+
+/* FIN estilo de la entrada */
+
+/* INICIO estilo de la salida */
+.div_output{
+	/* Rectangle 1 */
+	position: relative;
+	width: 400px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+	top: 5px;
+	left: 150px;
+
+	/* White */
+	background: #FFFFFF;
+
+	/* shadow */
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+}
+
+.img_muneco, .img_sin_mensaje{
+	/* Muñeco */
+	position: relative;
+	/*margin: 15px;*/
+}
+
+.button_copiar {
+	background: #FFFFFF;
+	/* Dark blue/dark-blue-300 */
+	color: #0A3871;
+}
+
+/* FIN estilo de la salida */
+
+button{
+	position: relative;
+	width: 250px;
+	height: 50px;
+	border-radius: 20px;
+	margin: 15px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	border: 1px solid #0A3871;
+
+}
+
+p {
+	width: 300px;
+	min-height: 350px;
+	max-height: max-content;
+	color: #0A3871;
+	font-family: var(--font-fam);
+	font-style: var(--font-s);
+	font-weight: var(--font-w);
+	font-size: var(--font-sz);
+	line-height: var(--line-hght);
+	text-align: left;
+	margin-left: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	
+}
+
+.paragraph_output {
+	white-space: initial;
+}
+
+
+/* Configuración de estilo para dispositivos moviles (Celulares) */
+@media only screen and (max-width: 480px){
+
+	:root{
+		position: relative;
+	}
+
+	/* INICIO estilo del contenido */
+	.div_contenido {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		height: max-content;
+		width: 370px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	/* FIN estilo del contenido */
+
+	/* INICIO LOGO */
+	.img_logo{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0px;
+		gap: 40px;
+
+		position: relative;
+		width: 120px;
+		height: 48px;
+	}
+	/* FIN LOGO */
+
+	/* INICIO estilo de la entrada */
+	.div_input{
+		position: relative;
+		width: 90%;
+		height: max-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.input_uno{
+		position: relative;
+		width: 100%;
+		height: 350px;
+		border:0;
+		background-color: #F3F5FC;
+		outline: none;
+
+		/* Configuración de fuente */
+		font-family: var(--font-fam);
+		font-style: var(--font-s);
+		font-weight: var(--font-w);
+		font-size: var(--font-sz);
+		line-height: var(--lin);
+
+
+		/* Dark blue/dark-blue-300 */
+		color: #0A3871;
+	}
+
+	.div_buttons_input{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: max-content;
+	}
+
+	.button_encriptar{
+		background: #0A3871;
+		color: #FFFFFF;
+	}
+
+	.button_desencriptar {
+		background: #D8DFE8;
+		/* Dark blue/dark-blue-300 */
+		color: #0A3871;
+	}
+
+	/* FIN estilo de la entrada */
+
+	/* INICIO estilo de la salida */
+	.div_output{
+		/* Rectangle 1 */
+		position: relative;
+		width: 90%;
+		height: max-content;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		margin: 10px;
+		margin-top: 120px;
+		padding: 10px;
+		top:0px;
+		left: 0px;
+
+		/* White */
+		background: #FFFFFF;
+
+		/* shadow */
+		box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+		border-radius: 32px;
+	}
+
+	.img_sin_mensaje{
+		position: relative;
+		/*margin: 15px;*/
+
+		width: 90%;
+	}
+
+	.img_muneco{
+		display: none;
+	}
+
+	.button_copiar {
+		background: #FFFFFF;
+		/* Dark blue/dark-blue-300 */
+		color: #0A3871;
+	}
+
+	/* FIN estilo de la salida */
+
+	button{
+		position: relative;
+		width: 340px;
+		height: 60px;
+		border-radius: 20px;
+		margin: 10px;
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		border: 1px solid #0A3871;
+	}
+
+	p {
+		min-height: max-content;
+		max-height: max-content;
+		width: 100%;
+		color: #0A3871;
+		font-family: var(--font-fam);
+		font-style: var(--font-s);
+		font-weight: var(--font-w);
+		font-size: var(--font-sz);
+		line-height: var(--line-hght);
+		text-align: left;
+	}
+}

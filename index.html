@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encriptador</title>
+	<!-- Estilo CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Estilo de fuente CSS-->
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+<body>
+
+	<div id="div_contenido" class="div_contenido">
+		<img src="logo.png" id="img_logo" class="img_logo">
+
+		<!-- INICIO: Espacio de entrada -->
+		<div id="div_input" class="div_input">
+			<textarea name="" placeholder="Ingresa el texto aquí" id="input_uno" class="input_uno"></textarea>
+			<div id="div_adv_input" class="div_adv_input">
+				<img src="adv_input.png">
+			</div>
+			
+
+			<div id="div_buttons_input" class="div_buttons_input">
+				<button type="button" id="button_encriptar" class="button_encriptar" onclick="encriptar()">Encriptar</button>
+				<button type="button" id="button_desencriptar" class="button_desencriptar" onclick="desencriptar()">Desencriptar</button>
+			</div>
+		</div>
+		<!-- FIN: Espacio de entrada -->
+
+		<!-- INICIO: Espacio de salida -->
+		<div id="div_output" class="div_output">
+			<p style="display: none" id="paragraph_output" class="paragraph_output"></p>
+			<button style="display: none" type="button" id="button_copiar" class="button_copiar" onclick="copy()">Copiar</button>
+			<img src="muneco.png" id="img_muneco" class="img_muneco">
+			<img src="sin_mensaje.png" id="img_sin_mensaje" class="img_sin_mensaje">
+		</div>
+		<!-- FIN: Espacio de salida -->
+	</div>
+
+	<!-- Script de funcionalidades -->
+	<script type="text/javascript" src="my_script.js"></script>
+</body>
+</html>
