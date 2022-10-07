@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Juego del Ahorcado</title>
+
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Estilo de fuente CSS-->
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+<body>
+	<header>
+		
+	</header>
+
+	<main>
+		<section class="section_inicio" id="section_inicio">
+			<button type="button" class="btn_iniciar_juego" onclick="iniciaJuego()">Iniciar juego</button>
+			<button class="btn_agregar_palabra">Agregar nueva palabra</button>
+		</section>
+		<section class="section_juego" id="section_juego">
+			<div class="canvas_juego">
+				<canvas id="canvas_tablero" width="940" height="520">
+				
+				</canvas>
+			</div>
+
+			<div class="btns_juego">
+				<button class="btn_nuevo_juego" onclick="iniciaJuego()">Nuevo juego</button>
+				<button class="btn_desistir" onclick="desistir()">Desistir</button>
+			</div>
+		</section>
+
+		<div id="div_modal" class="div_modal">
+			<div id="div_modal_contenido" class="div_modal_contenido">
+				<h1 id="h1_modal">¡Felicidades!¡Ganaste!</h1>
+				<p id="p_modal">Has adivinado la palabra secreta y lograste que Arturo no llegara a la horca. ¿Deseas volver a jugar?</p>
+				<button onclick="iniciaJuego()">Nuevo juego</button>
+				<button onclick="desistir()">Cancelar</button>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<h6>By: Eli Betzabé Teoyotl Sánchez</h6>
+	</footer>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

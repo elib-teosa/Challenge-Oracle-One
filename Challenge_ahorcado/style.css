@@ -1,0 +1,122 @@
+:root {
+	--font-fam: 'Inter';
+	--font-s: normal;
+	--font-w: bold;
+	--font-sz: 15px;
+	background: url("images/bg.jpg") repeat;
+	background-size: cover;
+}
+
+body {
+	font-family: var(--font-fam);
+}
+
+main {
+	justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section_inicio {
+	width: 940px;
+	height: 650px;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	width: 20%;
+	height: 65px;
+	margin: 10px 0;
+	padding: 10px 0;
+	border-radius: 12px;
+	border: 1px solid;
+	cursor: pointer;
+	transition: 400ms;
+	box-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
+
+	font-style: var(--font-s);
+	font-weight: var(--font-w);
+	font-size: var(--font-sz);
+}
+
+button:hover {
+	opacity: 0.8;
+	transform: scale(1.1);
+}
+
+.btn_iniciar_juego, .btn_nuevo_juego {
+	background: #0A3871;
+	border-color: #0A3871;
+	color: #FFFFFF;
+}
+
+.btn_agregar_palabra, .btn_desistir {
+	background: #FFDC4B;
+	color: #FFFFFF;
+	border-color: #FFDC4B;
+}
+
+.section_juego{
+	width: 940px;
+	height: 650px;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+section div {
+	width: 940px;
+	margin: 15px 0;
+}
+
+.btn_nuevo_juego, .btn_desistir {
+	margin: 0 10px;
+}
+
+.div_modal {
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+
+.div_modal_contenido {
+	background-color: #FFFFFF;
+	width: 600px;
+	max-width: 100%;
+	padding: 30px 50px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 30px;
+	padding: 0 0 15px 0;
+}
+
+footer {
+	text-align: center;
+	margin: 10px;
+	color: white;
+}
+
+
